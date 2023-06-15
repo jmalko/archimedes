@@ -1,0 +1,58 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: course_type
+            field:
+              collapse: false
+              previews: true
+              max_sets: 1
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    simple_video:
+                      display: 'Simple Video'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: course_simple
+                    full:
+                      display: Full
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: course
+              type: replicator
+              display: 'Course Type'
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+title: Course

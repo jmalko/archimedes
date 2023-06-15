@@ -1,0 +1,37 @@
+title: Instructor
+fields:
+  -
+    handle: position
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Position
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: profile_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Profile Image'
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - image
+      width: 50
+  -
+    import: full_bard

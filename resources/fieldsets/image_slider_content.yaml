@@ -1,0 +1,50 @@
+title: 'Image Slider + Content'
+fields:
+  -
+    handle: anchor
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Anchor & ID'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: images
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Images
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - image
+  -
+    import: full_bard
+  -
+    handle: alignment
+    field:
+      options:
+        left: Left
+        right: Right
+      inline: false
+      cast_booleans: false
+      default: left
+      type: radio
+      display: Alignment
+      icon: radio
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

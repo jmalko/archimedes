@@ -1,0 +1,35 @@
+title: Module
+fields:
+  -
+    handle: resources
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            lesson:
+              display: Lesson
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: lesson
+            quiz:
+              display: Quiz
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: quiz
+      type: replicator
+      display: Resources
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

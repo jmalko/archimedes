@@ -1,0 +1,38 @@
+.prose-invert {
+    text-shadow: 1px 1px 1px black;
+}
+
+.prose img {
+    margin: 0 auto 1em;
+}
+
+.prose h3 {
+    line-height: 1.25;
+}
+
+.prose li,
+.prose li p {
+    margin: 0;
+}
+
+.prose.links-to-buttons > div > p > a {
+    margin-top: 1em;
+    display: inline-block;
+    padding: .5em 3em;
+    border-radius: .5em;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-shadow: none;
+    opacity: 0.8;
+}
+.prose.links-to-buttons > div > p > a:hover {
+    opacity: 1;
+}
+
+.prose-invert.links-to-buttons > div > p > a {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+}
+

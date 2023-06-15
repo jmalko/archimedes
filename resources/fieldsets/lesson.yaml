@@ -1,0 +1,6 @@
+title: Lesson
+fields:
+  -
+    import: video_with_tracking
+  -
+    import: rows

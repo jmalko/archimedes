@@ -1,0 +1,88 @@
+title: Slide
+fields:
+  -
+    handle: image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Image
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - image
+  -
+    import: full_bard
+  -
+    handle: alignment
+    field:
+      inline: false
+      cast_booleans: false
+      type: radio
+      display: Alignment
+      icon: radio
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      options:
+        left: Left
+        center: Center
+        right: Right
+      default: left
+  -
+    handle: text_style_set
+    field:
+      options:
+        default: Default
+        alt1: 'Style 1'
+        alt2: 'Style 2'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: default
+      type: select
+      display: 'Text Style Set'
+      icon: select
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: invert_text
+    field:
+      default: false
+      type: toggle
+      display: 'Invert Text Colors'
+      icon: toggle
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: links_to_buttons
+    field:
+      default: false
+      type: toggle
+      display: 'Links to Buttons'
+      icon: toggle
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

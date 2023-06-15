@@ -1,0 +1,42 @@
+<div class="px-8 py-{{ padding ?? '12' }} w-full relative"
+    style="
+        background-color: {{ background_color ?? 'transparent' }};
+    ">
+    {{ if background_image }}
+    <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+        style="
+            background-image: url({{ background_image }});
+            opacity: {{ background_opacity / 100 }};
+            "></div>
+    {{ /if }}
+    <div class="max-w-5xl mx-auto relative z-1">
+        {{ if row_title }}
+        <div class="prose pb-8 mx-auto text-center max-w-none
+                     {{ if prose_invert }}prose-invert {{ /if }}
+                     {{ if text_style_set != "default" }}text-{{ text_style_set }} {{ /if }}
+                     {{ if links_to_buttons_row_title }}links-to-buttons {{ /if }}
+            ">
+                {{ row_title }}
+            </div>
+        {{ /if }}
+        <div class="w-full grid sm:grid-cols-{{ cols | count }}">
+            {{ cols }}
+            <div class="px-4 prose relative max-w-none
+                     {{ if cols | count == 1 }}mx-auto {{/if}}
+                     {{ if prose_invert }}prose-invert {{/if}}
+                     {{ if text_style_set != "default" }}text-{{ text_style_set }} {{ /if }}
+                     {{ if links_to_buttons }}links-to-buttons {{ /if }}
+                 "
+                 style="background-color: {{ background_color ?? 'transparent' }};">
+                {{ if background_image }}
+                <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+                     style="background-image: url({{ background_image }});
+                            opacity: {{ background_opacity / 100 }};">
+                </div>
+                {{ /if }}
+                <div class="relative z-1">{{ content }}</div>
+                </div>
+            {{ /cols }}
+        </div>
+    </div>
+</div>

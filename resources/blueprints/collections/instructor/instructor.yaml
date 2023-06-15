@@ -1,0 +1,33 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: Name
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            import: instructor
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+title: Instructor

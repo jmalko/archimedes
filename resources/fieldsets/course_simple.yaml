@@ -1,0 +1,6 @@
+title: 'Course (Simple Video Course)'
+fields:
+  -
+    import: video_with_tracking
+  -
+    import: rows

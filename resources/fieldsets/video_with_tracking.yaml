@@ -1,0 +1,40 @@
+title: 'Video Embed with View Tracking'
+fields:
+  -
+    handle: video_host
+    field:
+      options:
+        selfhosted: Self-hosted
+        cloudflare: 'Cloudflare Stream'
+        vimeo: Vimeo
+        wistia: Wistia
+        youtube: Youtube
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: selfhosted
+      type: select
+      display: 'Video Host'
+      icon: select
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: video_id
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Video ID'
+      icon: text
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

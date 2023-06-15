@@ -1,0 +1,62 @@
+title: Slides
+fields:
+  -
+    handle: anchor
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Anchor & ID'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      width: 50
+  -
+    handle: layout
+    field:
+      options:
+        default: Default
+        full-width: Full-width
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: default
+      type: select
+      display: Layout
+      icon: select
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: slides
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: slide
+      type: replicator
+      display: Slides
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

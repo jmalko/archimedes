@@ -1,0 +1,102 @@
+title: Question
+fields:
+  -
+    handle: question
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Question
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: supplemental_image
+    field:
+      max_files: 1
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Supplemental Image'
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - image
+  -
+    handle: answers
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            multiple_choice:
+              display: 'Multiple Choice'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: correct
+                  field:
+                    default: false
+                    type: toggle
+                    display: Correct
+                    icon: toggle
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Text
+                    icon: text
+                    width: 75
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+            true_false:
+              display: 'True False'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: correct
+                  field:
+                    options:
+                      'true': 'True'
+                      'false': 'False'
+                    inline: false
+                    cast_booleans: false
+                    default: 'false'
+                    type: radio
+                    display: Correct
+                    icon: radio
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: replicator
+      display: Answers
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

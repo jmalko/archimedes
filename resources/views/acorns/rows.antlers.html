@@ -1,0 +1,18 @@
+{{ rows }}
+    {{ if anchor }}
+        <div id="{{ anchor }}" name="{{ anchor }}">
+    {{ /if }}
+
+    {{ if type === "row" }}
+        {{ partial src="acorns/partials/row" }}
+    {{ elseif type === "slider" }}
+        {{ partial src="acorns/partials/slider" }}
+    {{ elseif type === "image_slider_content" }}
+        {{ partial src="acorns/partials/image_slider_content" }}
+    {{ /if }}
+
+    {{ if anchor }}
+        </div>
+    {{ /if }}
+
+{{ /rows }}

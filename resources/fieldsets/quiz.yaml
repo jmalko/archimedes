@@ -1,0 +1,28 @@
+title: Quiz
+fields:
+  -
+    handle: questions
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: 'New Set'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: question
+      type: replicator
+      display: Questions
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

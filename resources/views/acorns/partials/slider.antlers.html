@@ -1,0 +1,39 @@
+{{ if layout == "full-width" }}
+    <div class="center-slick-slider">
+        {{ slides }}
+        <div class="relative">
+            <div class="bg-cover absolute h-full w-full block" style="background-image: url('{{ image }}');"></div>
+            <div class="max-w-5xl mx-auto p-12 z-1 relative prose
+                {{ if invert_text}} prose-invert {{/if}}
+                {{ if links_to_buttons }}links-to-buttons {{/if}}
+                ">
+                <div>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+        {{ /slides }}
+    </div>
+{{ else }}
+    <div class="max-w-7xl mx-auto p-12">
+        <div class="slick-slider">
+            {{ slides }}
+                <div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div {{ if alignment == "right" }}class="order-last"{{ /if }}>
+                            <img src="{{ image }}">
+                        </div>
+                        <div class="prose grid gap-4 place-content-center
+                                {{ if invert_text}} prose-invert {{/if}}
+                                {{ if links_to_buttons }}links-to-buttons {{/if}}
+                            ">
+                            <div>
+                                {{ content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ /slides }}
+        </div>
+    </div>
+{{ /if }}

@@ -1,0 +1,14 @@
+export_paths:
+  - config/filesystems.php
+  - config/statamic/assets.php
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/css/acorns.css
+  - resources/css/slick.css
+  - resources/css/slick-theme.css
+  - resources/js/acorns.js
+  - resources/js/jquery-3.7.0.min.js
+  - resources/js/slick.min.js
+  - resources/views/acorns
+  - content/globals
+  - vite.config.js

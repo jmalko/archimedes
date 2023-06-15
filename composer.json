@@ -1,0 +1,9 @@
+{
+    "name": "my-vendor-name/archimedes",
+    "extra": {
+        "statamic": {
+            "name": "Archimedes",
+            "description": "Archimedes starter kit"
+        }
+    }
+}

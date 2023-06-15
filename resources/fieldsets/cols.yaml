@@ -1,0 +1,359 @@
+title: Cols
+fields:
+  -
+    handle: row_background_settings
+    field:
+      type: section
+      display: 'Row Settings'
+      icon: section
+      instructions: "Background and title settings for the entire row.  Each column has it's own background settings available too."
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: row_title
+    field:
+      buttons:
+        - h1
+        - h2
+        - h3
+        - h4
+        - bold
+        - italic
+        - underline
+        - strikethrough
+        - small
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: true
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Title
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      instructions: 'Content above the columns - useful for section titles'
+  -
+    handle: text_style_set
+    field:
+      options:
+        default: Default
+        alt1: 'Styles 1'
+        alt2: 'Styles 2'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: default
+      type: select
+      display: 'Text Style Set'
+      icon: select
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: prose_invert
+    field:
+      default: false
+      type: toggle
+      display: 'Invert Title Colors'
+      icon: toggle
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      instructions: 'Invert text colors for title'
+  -
+    handle: links_to_buttons_row_title
+    field:
+      default: false
+      type: toggle
+      display: 'Links to Buttons (Row Title)'
+      icon: toggle
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: column_layout
+    field:
+      options:
+        equal: 'Equal Width'
+        onethird_twothird: '1/3 + 2/3'
+        onequarter_threequarter: '1/4 + 3/4'
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Column Layout'
+      icon: select
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: padding
+    field:
+      options:
+        6: Small
+        12: Default
+        24: Large
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Vertical Padding'
+      icon: select
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      default: '12'
+  -
+    handle: additional_classes
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Additional CSS Classes'
+      icon: text
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: anchor
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Anchor & ID'
+      icon: text
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Background Image'
+      icon: assets
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      validate:
+        - image
+  -
+    handle: background_opacity
+    field:
+      min: 0
+      max: 100
+      step: 5
+      default: 100
+      type: range
+      display: 'Background Opacity'
+      icon: range
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: background_color
+    field:
+      allow_any: true
+      type: color
+      display: 'Background Color'
+      icon: color
+      width: 25
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: columns_editor
+    field:
+      type: section
+      display: Columns
+      icon: section
+      instructions: 'Add up to 12 columns per row. A 1 column row will center the column.'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: cols
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            col:
+              display: Column
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: full_bard
+                -
+                  handle: text_style_set
+                  field:
+                    options:
+                      default: Default
+                      alt1: 'Style 1'
+                      alt2: 'Style 2'
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    max_items: 1
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    default: default
+                    type: select
+                    display: 'Text Style Set'
+                    icon: select
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: prose_invert
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Invert Text Colors'
+                    icon: toggle
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    width: 33
+                -
+                  handle: links_to_buttons
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Links to Buttons'
+                    icon: toggle
+                    width: 33
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: background_image
+                  field:
+                    max_files: 1
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: 'Background Image'
+                    icon: assets
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                    validate:
+                      - image
+                -
+                  handle: background_opacity
+                  field:
+                    min: 0
+                    max: 100
+                    step: 5
+                    default: 100
+                    type: range
+                    display: 'Background Opacity'
+                    icon: range
+                    instructions: 'For background image'
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+                -
+                  handle: background_color
+                  field:
+                    allow_any: true
+                    type: color
+                    display: 'Background Color'
+                    icon: color
+                    width: 25
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    hide_display: false
+      type: replicator
+      display: Columns
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      max_sets: 12

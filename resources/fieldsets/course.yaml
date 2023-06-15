@@ -1,0 +1,44 @@
+title: Course
+fields:
+  -
+    import: rows
+  -
+    handle: elements
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            module:
+              display: Module
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: module
+            lesson:
+              display: Lesson
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: lesson
+            quiz:
+              display: Quiz
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: quiz
+      type: replicator
+      display: Elements
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false

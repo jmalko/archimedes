@@ -1,0 +1,43 @@
+title: Rows
+fields:
+  -
+    handle: rows
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            row:
+              display: Row
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: cols
+            slider:
+              display: Slider
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: slides
+            image_slider_content:
+              display: 'Image Slider + Content'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: image_slider_content
+      type: replicator
+      display: Rows
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      instructions: 'Set row settings, then add 1-12 columns to your row, fill with content.'
