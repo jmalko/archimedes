@@ -1,5 +1,5 @@
 {
-    "name": "my-vendor-name/archimedes",
+    "name": "jmalko/archimedes",
     "extra": {
         "statamic": {
             "name": "Archimedes",
