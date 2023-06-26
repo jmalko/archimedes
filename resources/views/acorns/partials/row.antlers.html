@@ -15,17 +15,27 @@
                      {{ if prose_invert }}prose-invert {{ /if }}
                      {{ if text_style_set != "default" }}text-{{ text_style_set }} {{ /if }}
                      {{ if links_to_buttons_row_title }}links-to-buttons {{ /if }}
+                     {{ text_style_set }}
+                     {{ additional_classes }}
             ">
                 {{ row_title }}
             </div>
         {{ /if }}
-        <div class="w-full grid sm:grid-cols-{{ cols | count }}">
+        <div class="w-full grid
+            {{ if column_layout != "equal" }}
+                sm:grid-cols-{{ column_layout }}
+            {{ else }}
+                sm:grid-cols-{{ columns | count }}
+            {{ /if }}
+            "
+            >
             {{ cols }}
             <div class="px-4 prose relative max-w-none
                      {{ if cols | count == 1 }}mx-auto {{/if}}
                      {{ if prose_invert }}prose-invert {{/if}}
                      {{ if text_style_set != "default" }}text-{{ text_style_set }} {{ /if }}
                      {{ if links_to_buttons }}links-to-buttons {{ /if }}
+                     {{ text_style_set }}
                  "
                  style="background-color: {{ background_color ?? 'transparent' }};">
                 {{ if background_image }}
